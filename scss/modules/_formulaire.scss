@@ -1,0 +1,643 @@
+/**
+ * @project Avis solution (formulaire.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gestion des styles des formulaires
+**/
+
+/** Import de mes variables **/
+@import '../utilitaires/variables';
+@import '../utilitaires/mixins';
+
+/********************* Styles *********************/
+.main{
+  input {
+    background-color: $blanc;
+    padding: 10px 0 10px 10px;
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+  }
+
+  input:-internal-autofill-selected{
+    background-color: white !important;
+  }
+
+  /********************* Illustration bureau *********************/
+  @media (min-width: $tablette) {
+    .image__header__bureau {
+      background-image: url("../airfraissvp/assets/images/image_bureau_formulaire.png");
+      height: 235px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  /********************* Titre page *********************/
+
+  .titre_page{
+    position: initial;
+    margin-left: 0;
+    top: 0;
+    h1 {
+      margin-left: 10px;
+      color: $bleuBase;
+    }
+  }
+
+  @media (min-width: $tablette) {
+    .titre_page{
+      position: absolute;
+      top: 189px;
+      margin-left: 10%;
+
+      h1{
+        color: $blanc;
+      }
+    }
+  }
+
+  @media (min-width: $tablette) {
+    .page__demander__avis{
+      margin-top: 40px;
+      display: flex;
+    }
+  }
+
+  /********************* ------------------ Demander un avis ------------------ *********************/
+  /********************* Section employé *********************/
+  .employe{
+    padding: 0 10px 10px 10px;
+    background-color: $fondBleuTresPale;
+    background-image: none;
+
+    &__entreprise{
+      text-align: center;
+
+      &__logo{
+        width: 165px;
+      }
+    }
+
+    &__sectionNom{
+
+      &__titre{
+        display: flex;
+
+        h2{
+          margin:0;
+        }
+
+        .icone__nonModifiable{
+          margin-left: 10px;
+
+          img{
+            vertical-align: baseline;
+          }
+        }
+      }
+
+      &__contenu{
+        &__texte{
+          width: span(6 of 8);
+          margin: 10px 0 0 0;
+          border-radius: 5px;
+          padding: 10px;
+          background-color: $fondBleuPale2;
+
+          font-weight: lighter;
+          font-style: italic;
+        }
+      }
+    }
+
+   &__sectionDem{
+     margin: 20px 0;
+
+      h3 {
+        margin: 0;
+        display: flex;
+      }
+
+     &__fond{
+       margin-left: 20px;
+
+       span {
+         padding: 10px 5px;
+         background-color: $fondBleuPale2;
+       }
+
+       &__Chiffre1{
+         border-right: 1px solid $detailsBleuPale;
+         border-top-left-radius: 5px;
+         border-bottom-left-radius: 5px;
+       }
+
+       &__Chiffre2{
+         border-right: 1px solid $detailsBleuPale;
+       }
+
+       &__Chiffre3{
+         border-top-right-radius: 5px;
+         border-bottom-right-radius: 5px;
+       }
+     }
+   }
+
+    @media (min-width: $bureau) {
+      width: 40%;
+      padding: 0 span(1 of 12) 0 span(1 of 12);
+      background-color: none;
+      background-image: linear-gradient(to bottom, $fondBleuTresPale, $blanc);
+    }
+  }
+
+  /********************* Illustration suite employé *********************/
+  @media (min-width: $tablette) {
+    .illustration__employe__fond{
+
+      margin-top: 70px;
+      &__image {
+        background-image: url("../airfraissvp/assets/images/fond_bureau_etoiles.svg");
+        height: 225px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  .form__avis{
+
+  /********************* Section information client *********************/
+    .info__client{
+      border: none;
+      padding: 10px;
+      margin: 0;
+
+      /********************* Section genre *********************/
+      &__genreTitre{
+        font-size: 18px;
+        font-weight: 700;
+        margin: 10px 0 5px 0;
+      }
+
+      &__radioGenre{
+        display: flex;
+      }
+
+      /********************* Section nom client *********************/
+      &__nomClient{
+        flex-direction: column;
+        display: flex;
+
+        .label__icone{
+          display: flex;
+        }
+
+        label{
+          font-family: $typoPrimaire;
+          font-size: 18px;
+          font-weight: 700;
+          margin: 10px 0 5px 0;
+        }
+
+        input{
+          border: 2px solid $fondBleuPale2;
+          padding: 12px 10px;
+          border-radius: 5px;
+        }
+      }
+
+      &__moyenComm{
+        font-size: 18px;
+        margin: 10px 0 5px 0;
+      }
+
+      .moyen__comm{
+        display: flex;
+      }
+
+      .form__div.courriel{
+        display: none;
+        padding: 20px;
+        background-color: $fondBleuPale2;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        .label__icone{
+          display: flex;
+        }
+
+        input {
+          box-shadow: none;
+          border: 2px solid $detailsBleuMoyen;
+          border-radius: 5px;
+          width: 95%;
+        }
+      }
+
+      .form__div.courriel.afficher_sectionComm{
+        display: none;
+      }
+
+      .form__div.texto{
+        display: none;
+        padding: 20px;
+        background-color: $fondBleuPale2;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        .label__icone{
+          display: flex;
+        }
+
+        input {
+          box-shadow: none;
+          border: 2px solid $detailsBleuMoyen;
+          border-radius: 5px;
+          width: 95%;
+        }
+      }
+
+      .form__div.texto.afficher_sectionComm{
+        display: block;
+      }
+    }
+
+    /********************* Section liens *********************/
+    .liens__avis{
+      border: none;
+      padding: 0 10px 10px 10px;
+      margin: 0;
+
+      h3 {
+        font-size: 18px;
+        margin: 10px 0 5px 0;
+      }
+
+      &__liens{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+    }
+
+    @media (min-width: $bureau) {
+      width: 40%;
+      margin-left: span(1 of 16);
+    }
+
+    /********************* Styles validation *********************/
+    .info__client__nomClient .message{
+      font-style: italic;
+      color: $typoRougeIncorrecte;
+      margin: 0;
+    }
+
+    .input_erreur{
+      border: 2px solid $rougeIncorrect !important;
+    }
+
+    .icone_valide{
+      background-image: url("../airfraissvp/assets/images/icone_validation_positive.svg");
+      height: 20px;
+      width: 20px;
+      align-self: center;
+      margin-left: 5px;
+      background-repeat: no-repeat;
+    }
+
+    .icone_erreur{
+      background-image: url("../airfraissvp/assets/images/icone_validation_negative.svg");
+      height: 20px;
+      width: 20px;
+      align-self: center;
+      margin-left: 5px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  /********************* Bouton formulaire *********************/
+  .submit_formulaire_fond{
+    padding: 20px 0;
+    text-align: center;
+
+    input{
+      border: 2px solid $jauneFonce;
+      box-shadow: 5px 5px $jaunePale;
+      border-radius: 5px;
+      background-color: $jauneBase;
+      width: span(3 of 8);
+      font-family: $typoPrimaire;
+      font-size: 22px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.5s background-color;
+
+      &:focus, &:hover{
+        background-color: $jauneFonce;
+      }
+    }
+
+    @media (min-width: $tablette) {
+      text-align: left;
+    }
+  }
+
+  /********************* Styles validation *********************/
+  .courriel .message, .texto .message{
+    font-style: italic;
+    color: $typoRougeIncorrecte;
+    margin: 0;
+  }
+
+  /********************* ------------------ Connexion ------------------ *********************/
+
+  .titre__pageConnexion, .titre__pageMdp{
+    margin-left: 10px;
+
+    h1{
+      color: $bleuBase;
+
+      @media (min-width: $tablette) {
+        position: initial;
+        margin-left: 0;
+        margin-top: 60px;
+      }
+    }
+  }
+
+  .form__flex{
+
+    @media (min-width: $tablette) {
+      display: flex;
+    }
+  }
+
+  .form__connexion, .form__mdp {
+    padding: 20px 10px 10px 10px;
+    background-color: $fondBleuTresPale;
+
+    // Section de l'utilisateur
+    .form__utilisateur{
+        margin-bottom: 20px;
+
+      &__titre{
+        label{
+          font-family: $typoPrimaire;
+          font-size: 18px;
+          font-weight: 700;
+          margin: 10px 0 5px 0;
+        }
+      }
+
+      input {
+        box-shadow: none;
+        border: 2px solid $detailsBleuMoyen;
+        border-radius: 5px;
+        width: span(6 of 8);
+      }
+    }
+
+    // Section du mot de passe
+    .form__mdp{
+      margin-bottom: 20px;
+      padding: 0;
+      width: 100%;
+
+      &__titre{
+        label{
+          font-family: $typoPrimaire;
+          font-size: 18px;
+          font-weight: 700;
+          margin: 10px 0 5px 0;
+        }
+      }
+
+      input {
+        box-shadow: none;
+        border: 2px solid $detailsBleuMoyen;
+        border-radius: 5px;
+        width: span(6 of 8);
+      }
+
+      &__icone{
+        input {
+          width: initial;
+          cursor: pointer;
+
+          &:checked ~ label:before {
+            background-image: url("../airfraissvp/assets/images/icone_mdp_devoile.svg");
+          }
+        }
+
+        label {
+          cursor: pointer;
+
+          &:before {
+            content: "";
+            margin-left: 10px;
+            line-height: 1.5;
+            padding: 12px;
+            text-align: center;
+            background-image: url("../airfraissvp/assets/images/icone_mdp_cache.svg");
+            background-repeat: no-repeat;
+            background-position: 90% center;
+            transition: background-image ease-in-out 0.3s;
+          }
+        }
+      }
+    }
+
+    // Section mot de passe oublié
+    .mdp_oublie{
+      display: inline-block;
+      width: 90%;
+      color: black;
+      text-decoration: none;
+
+      &__fond{
+        padding: 10px;
+        background-color: $fondBleuPale2;
+        border-radius: 5px;
+        display: flex;
+        transition: 0.5s background-color ease-in-out;
+
+        .icone__questions{
+          align-self: center;
+
+          img {
+            align-self: center;
+            display: flex;
+          }
+        }
+
+        &__texte{
+          margin-left: 10px;
+          line-height: initial;
+        }
+      }
+
+      &:hover .mdp_oublie__fond, &:focus .mdp_oublie__fond{
+        background-color: $detailsBleuMoyen2;
+      }
+    }
+
+    .submit_formulaire_fond{
+      input {
+        width: 50%;
+
+        @media (min-width: $tablette) {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    // Styles des messages
+    .message{
+      font-style: italic;
+      color: $typoRougeIncorrecte;
+      margin: 0;
+    }
+
+    @media (min-width: $tablette) {
+      width: 45%;
+    }
+
+    @media (min-width: $bureau) {
+      padding: 20px 20px 20px 30px;
+    }
+
+    .icone_valide{
+      background-image: url("../../airfraissvp/assets/images/icone_validation_positive.svg");
+      height: 20px;
+      width: 20px;
+      align-self: center;
+      margin-left: 5px;
+      background-repeat: no-repeat;
+    }
+
+    .icone_erreur{
+      background-image: url("../../airfraissvp/assets/images/icone_validation_negative.svg");
+      height: 20px;
+      width: 20px;
+      align-self: center;
+      margin-left: 5px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  // Image
+  .image__decorative__bureau{
+    display: none;
+
+    @media (min-width: $tablette) {
+      display: inline-block;
+      width: 40%;
+    }
+
+    @media (min-width: $bureau) {
+      margin-left: 50px;
+    }
+  }
+
+  // Formulaire oubli de mot de passe
+  .page_mdp{
+
+    &__texte{
+      margin: 40px 0;
+      padding: 10px;
+      background-color: $fondBleuPale2;
+      display: flex;
+      justify-content: space-around;
+
+      .icone__questions{
+        align-self: center;
+        margin-left: 20px;
+        margin-right: 10px;
+
+        img {
+          align-self: center;
+          display: flex;
+        }
+      }
+
+      &__contenu{
+        line-height: 19px;
+        font-size: 14px;
+        margin-right: 20px;
+      }
+
+      @media (min-width: $tablette) {
+        padding: 10px 40px;
+      }
+
+      @media (min-width: $bureau) {
+        padding: 10px 120px;
+      }
+    }
+
+    .page_mdp__flex{
+      display: block;
+
+      @media (min-width: $tablette) {
+        display: flex;
+      }
+    }
+
+    .submit_formulaire_fond{
+      input {
+        width: 90%;
+
+        @media (min-width: $tablette) {
+          margin-top: 20px;
+          font-size: 16px;
+          width: 80%;
+        }
+
+
+        @media (min-width: $bureau) {
+          font-size: 18px;
+          width: 70%;
+        }
+      }
+    }
+
+    .icone_valide{
+      background-image: url("../../airfraissvp/assets/images/icone_validation_positive.svg");
+      height: 20px;
+      width: 20px;
+      align-self: center;
+      margin-left: 5px;
+      background-repeat: no-repeat;
+    }
+
+    .icone_erreur{
+      background-image: url("../../airfraissvp/assets/images/icone_validation_negative.svg");
+      height: 20px;
+      width: 20px;
+      align-self: center;
+      margin-left: 5px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+// Modifications par Félix-Antoine Lavoie
+.moyen__comm--ON {
+  display: block !important;
+}
+
+select {
+  background-color: #FFFFFF;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  box-shadow: none;
+  border: 2px solid #9BA7D5;
+  border-radius: 5px;
+  width: 100%;
+  height: 2.5rem;
+
+  margin-top: 1rem;
+
+}

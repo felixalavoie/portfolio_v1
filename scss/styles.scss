@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/**
+ * @project Avis Solution (styles.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo gérer liens des différentes section du scss
+**/
+
+/****** Librairies ******/
+
+/** Normalize **/
+//@import '../../../../../../node_modules/normalize.scss/normalize.scss';
+
+/****** BASE ******/
+
+/** Typographie **/
+@import 'base/typo';
+@import 'base/hyperlien';
+@import 'base/bouton';
+
+/** Grille **/
+@import 'grille/general';
+@import 'grille/nav';
+@import 'grille/sections';
+@import 'grille/listeexp';
+
+/****** Modules ******/
+@import 'modules/formulaire';
+@import "modules/boutons_radios";
+@import "modules/checkbox";
+@import "modules/retroactions";
+//@import 'modules/header';
+
+// Modules des différentes pages
+
+/**** UTILITAIRES ****/
+@import 'utilitaires/variables';
+@import 'utilitaires/mixins';

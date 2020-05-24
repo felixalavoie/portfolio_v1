@@ -1,0 +1,54 @@
+/**
+ * @project Avis solution (variables.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gérer variable comme les couleurs et typographies à utiliser
+**/
+
+/** --------------------------------------------- Typographies -------------------------------------------------------------- **/
+
+/** Polices de caractères, importé de Google Fonts **/
+@import url('https://fonts.googleapis.com/css?family=Inter:500,600,700,800,900|Roboto+Condensed:300,300i,400,400i,700,700i&display=swap&subset=latin-ext');
+
+// Les grand titres, texte mis en valeur
+$typoPrimaire : 'Inter', Georges, serif;
+
+// Le texte courant
+$typoSecondaire : 'Roboto Condensed', Helvetica, sans-serif;
+
+/** --------------------------------------------- Couleurs -------------------------------------------------------------- **/
+
+/** Palette de couleurs (Ouverte au changement, à changer ici au besoin!) **/
+$noir : #000000;
+$blanc : #FFFFFF;
+
+/** Les deux couleurs principales **/
+$bleuBase: #130093;
+$jauneBase: #FFCE4A;
+$blue: #3E92CC;
+$purple: #A80874;
+$green: #2E8E02;
+$pink: #F87060;
+
+/** Autres couleur (Fond et décoration) **/
+
+// Bleus
+$fondBleuTresPale : #F9FAFE;
+$fondBleuPale : #F6F7FB;
+$fondBleuPale2 : #DDE4F1;
+$detailsBleuPale : #BEC9DB;
+$detailsBleuMoyen : #9BA7D5;
+$detailsBleuMoyen2: #C5D1E9;
+
+// Jaunes
+$jaunePale : #FFE396;
+$jauneFonce : #F2972A;
+
+// Couleurs de validation pour formulaire
+$rougeIncorrect : #FFAD95;
+$typoRougeIncorrecte : #871E1E;
+
+/** --------------------------------------------- Points de rupture -------------------------------------------------------------- **/
+
+$tablette : 600px;
+$bureau : 900px;
+$hd : 1200px;

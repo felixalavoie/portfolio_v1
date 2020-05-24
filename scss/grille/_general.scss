@@ -1,0 +1,52 @@
+/**
+ * @project Avis solution (general.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gestion de Susy, nb de colonnes et breakpoint(s)
+**/
+
+// Import de susy et des grilles
+@import '../../node_modules/susy/sass/susy';
+@import '../../node_modules/susy/sass/plugins/svg-grid';
+
+/****** Initialisation des variables ******/
+$bureau : 601px;
+
+.conteneur {
+  transform: translateX(5rem);
+}
+
+/****** Gestion de Suzy et conteneur (Mobile) ******/
+@media(max-width:(($bureau)-1px)){
+  $susy: (
+          'columns': susy-repeat(8),
+          'gutters': 0.75,
+          'spread': 'narrow',
+          'container-spread': 'narrow',
+  );
+  .conteneur {
+    background: susy-svg-grid($susy) no-repeat scroll;
+  }
+}
+
+/****** Gestion de Suzy et conteneur (Bureau) ******/
+@media(min-width:$bureau){
+  $susy: (
+          'columns': susy-repeat(12),
+          'gutters': 0.25,
+          'spread': 'narrow',
+          'container-spread': 'narrow'
+  );
+  .conteneur {
+    background: susy-svg-grid($susy) no-repeat scroll;
+  }
+}
+
+.conteneur {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+body{
+  margin: 0;
+  overflow-x: hidden;
+}

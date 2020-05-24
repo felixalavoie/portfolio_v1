@@ -1,0 +1,1735 @@
+@charset "UTF-8";
+/**
+ * @project Avis Solution (styles.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo gérer liens des différentes section du scss
+**/
+/****** Librairies ******/
+/** Normalize **/
+/****** BASE ******/
+/** Typographie **/
+/**
+ * @project Avis solution (typo.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gestion des typographies importées
+**/
+/**** Typographie responsive ****/
+/**
+ * @project Avis solution (variables.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gérer variable comme les couleurs et typographies à utiliser
+**/
+/** --------------------------------------------- Typographies -------------------------------------------------------------- **/
+/** Polices de caractères, importé de Google Fonts **/
+@import url("https://fonts.googleapis.com/css?family=Inter:500,600,700,800,900|Roboto+Condensed:300,300i,400,400i,700,700i&display=swap&subset=latin-ext");
+/** --------------------------------------------- Couleurs -------------------------------------------------------------- **/
+/** Palette de couleurs (Ouverte au changement, à changer ici au besoin!) **/
+/** Les deux couleurs principales **/
+/** Autres couleur (Fond et décoration) **/
+/** --------------------------------------------- Points de rupture -------------------------------------------------------------- **/
+/**
+ * @project Avis solution (mixins.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo gérer les mixins
+**/
+/**
+ * ----------------------------
+ * TABLE DES MATIERES - MIXINS
+ * ----------------------------
+ * Utilitaires de base
+ ** Box sizing
+ ** Clearfix
+ * Accessibilité
+ * Typographie
+ */
+/********** Utilitaires de base **********/
+/** Box sizing **/
+/* Clearfix */
+/********* Accessibilité *********/
+@import url("https://fonts.googleapis.com/css?family=Inter:500,600,700,800,900|Roboto+Condensed:300,300i,400,400i,700,700i&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Inter:500,600,700,800,900|Roboto+Condensed:300,300i,400,400i,700,700i&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Inter:500,600,700,800,900|Roboto+Condensed:300,300i,400,400i,700,700i&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Inter:500,600,700,800,900|Roboto+Condensed:300,300i,400,400i,700,700i&display=swap&subset=latin-ext");
+.visuallyhidden,
+.screen-reader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus,
+.screen-reader-only.focusable:active,
+.screen-reader-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/******** Typographie *********/
+body {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 16px;
+  /* 16px pour toutes les largeurs d'écran */
+  line-height: 28px;
+}
+h1,
+.titreNiveau1,
+h2,
+.titreNiveau2,
+h3,
+.titreNiveau3 {
+  font-family: "Inter", Georges, serif;
+  margin: 0;
+}
+
+h1,
+.titreNiveau1 {
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+h1--desktop,
+.titreNiveau1--desktop {
+  font-size: 33px;
+}
+
+h2,
+.titreNiveau2 {
+  font-size: 48px;
+  font-weight: 700;
+  width: 100%;
+  text-align: left;
+  padding-top: 5rem;
+  color: white;
+}
+
+h3,
+.titreNiveau3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+h3--desktop,
+.titreNiveau3--desktop {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.texte {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.375;
+}
+.texte--desktop {
+  line-height: 1.5;
+}
+
+/**
+ * @project Avis solution (hyperlien.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Style des liens utilisés
+**/
+/**
+ * @project Avis solution (bouton.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Style de bouton utilisé
+**/
+/** Grille **/
+/**
+ * @project Avis solution (general.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gestion de Susy, nb de colonnes et breakpoint(s)
+**/
+/****** Initialisation des variables ******/
+.conteneur {
+  transform: translateX(5rem);
+}
+
+/****** Gestion de Suzy et conteneur (Mobile) ******/
+@media (max-width: 600px) {
+  .conteneur {
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(64, 191, 64, 0.5);" /%3E%3Cstop offset="100%" style="stop-color:rgba(159, 223, 159, 0.5);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="7.5471698113%" height="100%"/%3E%3Crect x="13.2075471698%" width="7.5471698113%" height="100%"/%3E%3Crect x="26.4150943396%" width="7.5471698113%" height="100%"/%3E%3Crect x="39.6226415094%" width="7.5471698113%" height="100%"/%3E%3Crect x="52.8301886792%" width="7.5471698113%" height="100%"/%3E%3Crect x="66.0377358491%" width="7.5471698113%" height="100%"/%3E%3Crect x="79.2452830189%" width="7.5471698113%" height="100%"/%3E%3Crect x="92.4528301887%" width="7.5471698113%" height="100%"/%3E%3C/svg%3E') no-repeat scroll;
+  }
+}
+/****** Gestion de Suzy et conteneur (Bureau) ******/
+@media (min-width: 601px) {
+  .conteneur {
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(64, 191, 64, 0.5);" /%3E%3Cstop offset="100%" style="stop-color:rgba(159, 223, 159, 0.5);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="6.7796610169%" height="100%"/%3E%3Crect x="8.4745762712%" width="6.7796610169%" height="100%"/%3E%3Crect x="16.9491525424%" width="6.7796610169%" height="100%"/%3E%3Crect x="25.4237288136%" width="6.7796610169%" height="100%"/%3E%3Crect x="33.8983050847%" width="6.7796610169%" height="100%"/%3E%3Crect x="42.3728813559%" width="6.7796610169%" height="100%"/%3E%3Crect x="50.8474576271%" width="6.7796610169%" height="100%"/%3E%3Crect x="59.3220338983%" width="6.7796610169%" height="100%"/%3E%3Crect x="67.7966101695%" width="6.7796610169%" height="100%"/%3E%3Crect x="76.2711864407%" width="6.7796610169%" height="100%"/%3E%3Crect x="84.7457627119%" width="6.7796610169%" height="100%"/%3E%3Crect x="93.2203389831%" width="6.7796610169%" height="100%"/%3E%3C/svg%3E') no-repeat scroll;
+  }
+}
+.conteneur {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Open Sans";
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 600ms ease;
+  overflow: scroll;
+  z-index: 10;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.4);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.fa-primary {
+  color: #fff;
+}
+
+.fa-secondary {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.logo-text {
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px;
+  }
+}
+.light {
+  --text-primary: #1f1f1f;
+  --text-secondary: #000000;
+  --bg-primary: #ffffff;
+  --bg-secondary: #e4e4e4;
+}
+
+.nav__label {
+  filter: grayscale(0%) opacity(1) !important;
+}
+
+#lang {
+  padding: 2rem 0;
+  text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+#lang a {
+  text-decoration: none;
+  color: #FFFFFF;
+  filter: grayscale(100%) opacity(0.4);
+}
+
+.lang_active {
+  filter: grayscale(0%) opacity(1) !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+  background-image: url("../images/background_texture.jpg");
+  background-repeat: repeat;
+  scroll-behavior: smooth;
+}
+
+main {
+  max-height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.conteneur {
+  height: 100vh;
+}
+
+.section {
+  scroll-snap-align: center;
+}
+
+.section {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.section1 {
+  background-color: rgba(62, 146, 204, 0.7);
+}
+.section1 .conteneur {
+  position: relative;
+  height: 100vh;
+  vertical-align: middle;
+}
+.section1 img, .section1 .infos {
+  margin-top: 40vh;
+  transform: translateY(-50%);
+}
+.section1 img {
+  width: 23.7288135593%;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin-left: 8.4745762712%;
+}
+.section1 .infos {
+  width: 49.1525423729%;
+  margin-right: 8.4745762712%;
+  float: right;
+  padding: 3rem 0;
+}
+
+.section2 {
+  background-color: rgba(168, 8, 116, 0.7);
+}
+.section2 .projets {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.section2 .un_projet {
+  margin-top: 2rem;
+  width: 32.2033898305%;
+  height: 35rem;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(35, 35, 46, 0.9);
+  color: #FFFFFF;
+  opacity: 1;
+  transition: ease-in-out 0.3s;
+}
+.section2 .un_projet:hover .un_projet-cover {
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  z-index: -1;
+}
+.section2 .un_projet-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+.section2 .un_projet-techs {
+  list-style: none;
+  display: inline;
+  color: #3E92CC;
+}
+.section2 .un_projet-techs li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.section2 .un_projet .ext_links {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  z-index: 5;
+}
+.section2 .un_projet .ext_links a {
+  display: inline-block;
+  margin-right: 1.5rem;
+  text-align: center;
+  vertical-align: bottom;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  transition: ease-in-out 0.4s;
+}
+.section2 .un_projet .ext_links a:hover {
+  background-color: #FFFFFF;
+}
+.section2 .un_projet .ext_links a:hover svg {
+  transform: scale(0.7);
+}
+.section2 .un_projet .ext_links a:hover svg path {
+  fill: #000000;
+}
+.section2 .un_projet .ext_links a.view svg {
+  margin-top: 0.25rem;
+}
+.section2 .un_projet .ext_links a.github svg {
+  margin-top: 0.2rem;
+}
+.section2 .un_projet .ext_links a svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.section2 .un_projet .ext_links a svg path {
+  fill: #FFFFFF;
+}
+
+.section3 {
+  background-color: rgba(46, 142, 2, 0.7);
+}
+.section3 .techs {
+  width: 100%;
+  margin-top: 12rem;
+}
+
+.section4 {
+  background-color: rgba(248, 112, 96, 0.7);
+}
+.section4 .conteneur {
+  position: relative;
+}
+.section4 form {
+  width: 49.1525423729%;
+  margin: 2rem auto;
+}
+.section4 form .form__div {
+  margin-bottom: 1rem;
+}
+.section4 form label, .section4 form input, .section4 form textarea {
+  width: 100%;
+  border: none;
+  border-radius: 0.25rem;
+}
+.section4 form input {
+  height: 1.5rem;
+  padding: 0.5rem;
+}
+.section4 form textarea {
+  height: 8rem;
+  padding: 0.5rem;
+}
+.section4 form input[type=submit] {
+  width: 31.0344827586%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.1rem;
+  padding: 0;
+  height: 3.5rem;
+  border: 3px solid black;
+  border-radius: 0.5rem;
+  line-height: 2.1rem;
+  transition: ease-in-out 0.2s;
+}
+.section4 form input[type=submit]:hover {
+  background-color: black;
+  color: white;
+}
+.section4 form .message_erreur {
+  color: #871E1E;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.social {
+  width: 6.7796610169%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+}
+.social a {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 50%;
+  margin-top: -16rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: ease-in-out 0.2s;
+}
+.social a svg {
+  padding: 1rem;
+}
+.social a:hover {
+  background-color: black;
+}
+.social a:hover #path {
+  fill: white;
+}
+.social a:last-of-type:after {
+  content: url("../images/svg/horizontal_line.svg");
+  width: 100%;
+  display: block;
+  vertical-align: bottom;
+  font-size: 0;
+  margin-top: 1rem;
+}
+
+.liste_exp {
+  list-style: none;
+  margin-top: 3rem;
+  margin-left: 8.4745762712%;
+  padding-left: 0;
+  width: 32.2033898305%;
+  display: inline-block;
+}
+.liste_exp li {
+  border-left: 2px solid rgba(255, 255, 255, 0.65);
+  padding: 0.5rem 1rem;
+  color: rgba(255, 255, 255, 0.65);
+  transition: ease-in-out 0.2s;
+}
+.liste_exp li:hover, .liste_exp .selectedli {
+  border-left: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.exp_text {
+  width: 40.6779661017%;
+  float: right;
+  margin-right: 16.9491525424%;
+  position: relative;
+}
+
+.exp_text_div {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+  color: #FFFFFF;
+}
+.exp_text_div:first-of-type {
+  opacity: 1;
+}
+
+.un_exp--position, .un_exp--where {
+  font-weight: bolder;
+  display: inline-block;
+}
+
+.un_exp--where {
+  color: #A80874;
+}
+
+.un_exp--timeframe {
+  display: block;
+}
+
+.un_exp--liste {
+  list-style: none;
+  padding-left: 0;
+}
+
+.un_exp--liste-point {
+  margin-bottom: 1rem;
+}
+.un_exp--liste-point:before {
+  content: ">";
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/****** Modules ******/
+/**
+ * @project Avis solution (formulaire.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gestion des styles des formulaires
+**/
+/** Import de mes variables **/
+/**
+ * @project Avis solution (variables.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gérer variable comme les couleurs et typographies à utiliser
+**/
+/** --------------------------------------------- Typographies -------------------------------------------------------------- **/
+/** Polices de caractères, importé de Google Fonts **/
+/** --------------------------------------------- Couleurs -------------------------------------------------------------- **/
+/** Palette de couleurs (Ouverte au changement, à changer ici au besoin!) **/
+/** Les deux couleurs principales **/
+/** Autres couleur (Fond et décoration) **/
+/** --------------------------------------------- Points de rupture -------------------------------------------------------------- **/
+/**
+ * @project Avis solution (mixins.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo gérer les mixins
+**/
+/**
+ * ----------------------------
+ * TABLE DES MATIERES - MIXINS
+ * ----------------------------
+ * Utilitaires de base
+ ** Box sizing
+ ** Clearfix
+ * Accessibilité
+ * Typographie
+ */
+/********** Utilitaires de base **********/
+/** Box sizing **/
+/* Clearfix */
+/********* Accessibilité *********/
+.visuallyhidden,
+.screen-reader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus,
+.screen-reader-only.focusable:active,
+.screen-reader-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/******** Typographie *********/
+/********************* Styles *********************/
+.main {
+  /********************* Illustration bureau *********************/
+  /********************* Titre page *********************/
+  /********************* ------------------ Demander un avis ------------------ *********************/
+  /********************* Section employé *********************/
+  /********************* Illustration suite employé *********************/
+  /********************* Bouton formulaire *********************/
+  /********************* Styles validation *********************/
+  /********************* ------------------ Connexion ------------------ *********************/
+}
+.main input {
+  background-color: #FFFFFF;
+  padding: 10px 0 10px 10px;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+}
+.main input:-internal-autofill-selected {
+  background-color: white !important;
+}
+@media (min-width: 600px) {
+  .main .image__header__bureau {
+    background-image: url("../airfraissvp/assets/images/image_bureau_formulaire.png");
+    height: 235px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.main .titre_page {
+  position: initial;
+  margin-left: 0;
+  top: 0;
+}
+.main .titre_page h1 {
+  margin-left: 10px;
+  color: #130093;
+}
+@media (min-width: 600px) {
+  .main .titre_page {
+    position: absolute;
+    top: 189px;
+    margin-left: 10%;
+  }
+  .main .titre_page h1 {
+    color: #FFFFFF;
+  }
+}
+@media (min-width: 600px) {
+  .main .page__demander__avis {
+    margin-top: 40px;
+    display: flex;
+  }
+}
+.main .employe {
+  padding: 0 10px 10px 10px;
+  background-color: #F9FAFE;
+  background-image: none;
+}
+.main .employe__entreprise {
+  text-align: center;
+}
+.main .employe__entreprise__logo {
+  width: 165px;
+}
+.main .employe__sectionNom__titre {
+  display: flex;
+}
+.main .employe__sectionNom__titre h2 {
+  margin: 0;
+}
+.main .employe__sectionNom__titre .icone__nonModifiable {
+  margin-left: 10px;
+}
+.main .employe__sectionNom__titre .icone__nonModifiable img {
+  vertical-align: baseline;
+}
+.main .employe__sectionNom__contenu__texte {
+  width: 74.358974359%;
+  margin: 10px 0 0 0;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #DDE4F1;
+  font-weight: lighter;
+  font-style: italic;
+}
+.main .employe__sectionDem {
+  margin: 20px 0;
+}
+.main .employe__sectionDem h3 {
+  margin: 0;
+  display: flex;
+}
+.main .employe__sectionDem__fond {
+  margin-left: 20px;
+}
+.main .employe__sectionDem__fond span {
+  padding: 10px 5px;
+  background-color: #DDE4F1;
+}
+.main .employe__sectionDem__fond__Chiffre1 {
+  border-right: 1px solid #BEC9DB;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.main .employe__sectionDem__fond__Chiffre2 {
+  border-right: 1px solid #BEC9DB;
+}
+.main .employe__sectionDem__fond__Chiffre3 {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+@media (min-width: 900px) {
+  .main .employe {
+    width: 40%;
+    padding: 0 6.7796610169% 0 6.7796610169%;
+    background-color: none;
+    background-image: linear-gradient(to bottom, #F9FAFE, #FFFFFF);
+  }
+}
+@media (min-width: 600px) {
+  .main .illustration__employe__fond {
+    margin-top: 70px;
+  }
+  .main .illustration__employe__fond__image {
+    background-image: url("../airfraissvp/assets/images/fond_bureau_etoiles.svg");
+    height: 225px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.main .form__avis {
+  /********************* Section information client *********************/
+  /********************* Section liens *********************/
+  /********************* Styles validation *********************/
+}
+.main .form__avis .info__client {
+  border: none;
+  padding: 10px;
+  margin: 0;
+  /********************* Section genre *********************/
+  /********************* Section nom client *********************/
+}
+.main .form__avis .info__client__genreTitre {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0 5px 0;
+}
+.main .form__avis .info__client__radioGenre {
+  display: flex;
+}
+.main .form__avis .info__client__nomClient {
+  flex-direction: column;
+  display: flex;
+}
+.main .form__avis .info__client__nomClient .label__icone {
+  display: flex;
+}
+.main .form__avis .info__client__nomClient label {
+  font-family: "Inter", Georges, serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0 5px 0;
+}
+.main .form__avis .info__client__nomClient input {
+  border: 2px solid #DDE4F1;
+  padding: 12px 10px;
+  border-radius: 5px;
+}
+.main .form__avis .info__client__moyenComm {
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+}
+.main .form__avis .info__client .moyen__comm {
+  display: flex;
+}
+.main .form__avis .info__client .form__div.courriel {
+  display: none;
+  padding: 20px;
+  background-color: #DDE4F1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.main .form__avis .info__client .form__div.courriel .label__icone {
+  display: flex;
+}
+.main .form__avis .info__client .form__div.courriel input {
+  box-shadow: none;
+  border: 2px solid #9BA7D5;
+  border-radius: 5px;
+  width: 95%;
+}
+.main .form__avis .info__client .form__div.courriel.afficher_sectionComm {
+  display: none;
+}
+.main .form__avis .info__client .form__div.texto {
+  display: none;
+  padding: 20px;
+  background-color: #DDE4F1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.main .form__avis .info__client .form__div.texto .label__icone {
+  display: flex;
+}
+.main .form__avis .info__client .form__div.texto input {
+  box-shadow: none;
+  border: 2px solid #9BA7D5;
+  border-radius: 5px;
+  width: 95%;
+}
+.main .form__avis .info__client .form__div.texto.afficher_sectionComm {
+  display: block;
+}
+.main .form__avis .liens__avis {
+  border: none;
+  padding: 0 10px 10px 10px;
+  margin: 0;
+}
+.main .form__avis .liens__avis h3 {
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+}
+.main .form__avis .liens__avis__liens {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .main .form__avis {
+    width: 40%;
+    margin-left: 5.0632911392%;
+  }
+}
+.main .form__avis .info__client__nomClient .message {
+  font-style: italic;
+  color: #871E1E;
+  margin: 0;
+}
+.main .form__avis .input_erreur {
+  border: 2px solid #FFAD95 !important;
+}
+.main .form__avis .icone_valide {
+  background-image: url("../airfraissvp/assets/images/icone_validation_positive.svg");
+  height: 20px;
+  width: 20px;
+  align-self: center;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+}
+.main .form__avis .icone_erreur {
+  background-image: url("../airfraissvp/assets/images/icone_validation_negative.svg");
+  height: 20px;
+  width: 20px;
+  align-self: center;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+}
+.main .submit_formulaire_fond {
+  padding: 20px 0;
+  text-align: center;
+}
+.main .submit_formulaire_fond input {
+  border: 2px solid #F2972A;
+  box-shadow: 5px 5px #FFE396;
+  border-radius: 5px;
+  background-color: #FFCE4A;
+  width: 35.8974358974%;
+  font-family: "Inter", Georges, serif;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s background-color;
+}
+.main .submit_formulaire_fond input:focus, .main .submit_formulaire_fond input:hover {
+  background-color: #F2972A;
+}
+@media (min-width: 600px) {
+  .main .submit_formulaire_fond {
+    text-align: left;
+  }
+}
+.main .courriel .message, .main .texto .message {
+  font-style: italic;
+  color: #871E1E;
+  margin: 0;
+}
+.main .titre__pageConnexion, .main .titre__pageMdp {
+  margin-left: 10px;
+}
+.main .titre__pageConnexion h1, .main .titre__pageMdp h1 {
+  color: #130093;
+}
+@media (min-width: 600px) {
+  .main .titre__pageConnexion h1, .main .titre__pageMdp h1 {
+    position: initial;
+    margin-left: 0;
+    margin-top: 60px;
+  }
+}
+@media (min-width: 600px) {
+  .main .form__flex {
+    display: flex;
+  }
+}
+.main .form__connexion, .main .form__mdp {
+  padding: 20px 10px 10px 10px;
+  background-color: #F9FAFE;
+}
+.main .form__connexion .form__utilisateur, .main .form__mdp .form__utilisateur {
+  margin-bottom: 20px;
+}
+.main .form__connexion .form__utilisateur__titre label, .main .form__mdp .form__utilisateur__titre label {
+  font-family: "Inter", Georges, serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0 5px 0;
+}
+.main .form__connexion .form__utilisateur input, .main .form__mdp .form__utilisateur input {
+  box-shadow: none;
+  border: 2px solid #9BA7D5;
+  border-radius: 5px;
+  width: 74.358974359%;
+}
+.main .form__connexion .form__mdp, .main .form__mdp .form__mdp {
+  margin-bottom: 20px;
+  padding: 0;
+  width: 100%;
+}
+.main .form__connexion .form__mdp__titre label, .main .form__mdp .form__mdp__titre label {
+  font-family: "Inter", Georges, serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0 5px 0;
+}
+.main .form__connexion .form__mdp input, .main .form__mdp .form__mdp input {
+  box-shadow: none;
+  border: 2px solid #9BA7D5;
+  border-radius: 5px;
+  width: 74.358974359%;
+}
+.main .form__connexion .form__mdp__icone input, .main .form__mdp .form__mdp__icone input {
+  width: initial;
+  cursor: pointer;
+}
+.main .form__connexion .form__mdp__icone input:checked ~ label:before, .main .form__mdp .form__mdp__icone input:checked ~ label:before {
+  background-image: url("../airfraissvp/assets/images/icone_mdp_devoile.svg");
+}
+.main .form__connexion .form__mdp__icone label, .main .form__mdp .form__mdp__icone label {
+  cursor: pointer;
+}
+.main .form__connexion .form__mdp__icone label:before, .main .form__mdp .form__mdp__icone label:before {
+  content: "";
+  margin-left: 10px;
+  line-height: 1.5;
+  padding: 12px;
+  text-align: center;
+  background-image: url("../airfraissvp/assets/images/icone_mdp_cache.svg");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  transition: background-image ease-in-out 0.3s;
+}
+.main .form__connexion .mdp_oublie, .main .form__mdp .mdp_oublie {
+  display: inline-block;
+  width: 90%;
+  color: black;
+  text-decoration: none;
+}
+.main .form__connexion .mdp_oublie__fond, .main .form__mdp .mdp_oublie__fond {
+  padding: 10px;
+  background-color: #DDE4F1;
+  border-radius: 5px;
+  display: flex;
+  transition: 0.5s background-color ease-in-out;
+}
+.main .form__connexion .mdp_oublie__fond .icone__questions, .main .form__mdp .mdp_oublie__fond .icone__questions {
+  align-self: center;
+}
+.main .form__connexion .mdp_oublie__fond .icone__questions img, .main .form__mdp .mdp_oublie__fond .icone__questions img {
+  align-self: center;
+  display: flex;
+}
+.main .form__connexion .mdp_oublie__fond__texte, .main .form__mdp .mdp_oublie__fond__texte {
+  margin-left: 10px;
+  line-height: initial;
+}
+.main .form__connexion .mdp_oublie:hover .mdp_oublie__fond, .main .form__connexion .mdp_oublie:focus .mdp_oublie__fond, .main .form__mdp .mdp_oublie:hover .mdp_oublie__fond, .main .form__mdp .mdp_oublie:focus .mdp_oublie__fond {
+  background-color: #C5D1E9;
+}
+.main .form__connexion .submit_formulaire_fond input, .main .form__mdp .submit_formulaire_fond input {
+  width: 50%;
+}
+@media (min-width: 600px) {
+  .main .form__connexion .submit_formulaire_fond input, .main .form__mdp .submit_formulaire_fond input {
+    margin-top: 20px;
+  }
+}
+.main .form__connexion .message, .main .form__mdp .message {
+  font-style: italic;
+  color: #871E1E;
+  margin: 0;
+}
+@media (min-width: 600px) {
+  .main .form__connexion, .main .form__mdp {
+    width: 45%;
+  }
+}
+@media (min-width: 900px) {
+  .main .form__connexion, .main .form__mdp {
+    padding: 20px 20px 20px 30px;
+  }
+}
+.main .form__connexion .icone_valide, .main .form__mdp .icone_valide {
+  background-image: url("../../airfraissvp/assets/images/icone_validation_positive.svg");
+  height: 20px;
+  width: 20px;
+  align-self: center;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+}
+.main .form__connexion .icone_erreur, .main .form__mdp .icone_erreur {
+  background-image: url("../../airfraissvp/assets/images/icone_validation_negative.svg");
+  height: 20px;
+  width: 20px;
+  align-self: center;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+}
+.main .image__decorative__bureau {
+  display: none;
+}
+@media (min-width: 600px) {
+  .main .image__decorative__bureau {
+    display: inline-block;
+    width: 40%;
+  }
+}
+@media (min-width: 900px) {
+  .main .image__decorative__bureau {
+    margin-left: 50px;
+  }
+}
+.main .page_mdp__texte {
+  margin: 40px 0;
+  padding: 10px;
+  background-color: #DDE4F1;
+  display: flex;
+  justify-content: space-around;
+}
+.main .page_mdp__texte .icone__questions {
+  align-self: center;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.main .page_mdp__texte .icone__questions img {
+  align-self: center;
+  display: flex;
+}
+.main .page_mdp__texte__contenu {
+  line-height: 19px;
+  font-size: 14px;
+  margin-right: 20px;
+}
+@media (min-width: 600px) {
+  .main .page_mdp__texte {
+    padding: 10px 40px;
+  }
+}
+@media (min-width: 900px) {
+  .main .page_mdp__texte {
+    padding: 10px 120px;
+  }
+}
+.main .page_mdp .page_mdp__flex {
+  display: block;
+}
+@media (min-width: 600px) {
+  .main .page_mdp .page_mdp__flex {
+    display: flex;
+  }
+}
+.main .page_mdp .submit_formulaire_fond input {
+  width: 90%;
+}
+@media (min-width: 600px) {
+  .main .page_mdp .submit_formulaire_fond input {
+    margin-top: 20px;
+    font-size: 16px;
+    width: 80%;
+  }
+}
+@media (min-width: 900px) {
+  .main .page_mdp .submit_formulaire_fond input {
+    font-size: 18px;
+    width: 70%;
+  }
+}
+.main .page_mdp .icone_valide {
+  background-image: url("../../airfraissvp/assets/images/icone_validation_positive.svg");
+  height: 20px;
+  width: 20px;
+  align-self: center;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+}
+.main .page_mdp .icone_erreur {
+  background-image: url("../../airfraissvp/assets/images/icone_validation_negative.svg");
+  height: 20px;
+  width: 20px;
+  align-self: center;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+}
+
+.moyen__comm--ON {
+  display: block !important;
+}
+
+select {
+  background-color: #FFFFFF;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  box-shadow: none;
+  border: 2px solid #9BA7D5;
+  border-radius: 5px;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 1rem;
+}
+
+/**
+ * @project Avis solution (boutons_radios.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gestion des styles des boutons radios
+**/
+/** Import de mes variables **/
+/**
+ * @project Avis solution (variables.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gérer variable comme les couleurs et typographies à utiliser
+**/
+/** --------------------------------------------- Typographies -------------------------------------------------------------- **/
+/** Polices de caractères, importé de Google Fonts **/
+/** --------------------------------------------- Couleurs -------------------------------------------------------------- **/
+/** Palette de couleurs (Ouverte au changement, à changer ici au besoin!) **/
+/** Les deux couleurs principales **/
+/** Autres couleur (Fond et décoration) **/
+/** --------------------------------------------- Points de rupture -------------------------------------------------------------- **/
+/**
+ * @project Avis solution (mixins.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo gérer les mixins
+**/
+/**
+ * ----------------------------
+ * TABLE DES MATIERES - MIXINS
+ * ----------------------------
+ * Utilitaires de base
+ ** Box sizing
+ ** Clearfix
+ * Accessibilité
+ * Typographie
+ */
+/********** Utilitaires de base **********/
+/** Box sizing **/
+/* Clearfix */
+/********* Accessibilité *********/
+.visuallyhidden,
+.screen-reader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus,
+.screen-reader-only.focusable:active,
+.screen-reader-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/******** Typographie *********/
+/********************* Styles *********************/
+.main {
+  /********************* Boutons radios (Seuls) *********************/
+  /********************* Boutons radios (Avec dessous) *********************/
+}
+.main .boutonRadio2 {
+  width: 50%;
+  padding: 10px;
+  background-color: #F6F7FB;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 0;
+}
+.main .boutonRadio2 input {
+  display: none;
+}
+.main .boutonRadio2 label {
+  font-weight: lighter;
+  margin-left: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.main .boutonRadio2 label:before {
+  content: "";
+  cursor: pointer;
+  padding: 15px;
+  margin-right: 15px;
+  line-height: 1.5;
+  text-align: center;
+  background-image: url("../airfraissvp/assets/images/icone_bouton_radio.svg");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  transition: background-image ease-in-out 0.3s;
+  z-index: 2;
+}
+.main .boutonRadio2 label:after {
+  width: 10px;
+  height: 5px;
+  border-radius: 25%;
+  content: "";
+  background-color: #DDE4F1;
+  position: absolute;
+  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transition: all 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  z-index: -1;
+}
+.main .boutonRadio2 input:checked ~ label:before {
+  background-image: url("../airfraissvp/assets/images/icone_bouton_radioSelectionne.svg");
+}
+.main .boutonRadio2 input:checked ~ label:after {
+  transform: translate(-40%, -50%) scale3d(100, 30, 1);
+  opacity: 1;
+}
+.main .boutonRadio1 {
+  width: 50%;
+  padding: 10px;
+  background-color: #F6F7FB;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 0;
+}
+.main .boutonRadio1 input {
+  display: none;
+}
+.main .boutonRadio1 label {
+  font-weight: lighter;
+  margin-left: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.main .boutonRadio1 label:before {
+  content: "";
+  cursor: pointer;
+  padding: 15px;
+  margin-right: 15px;
+  line-height: 1.5;
+  text-align: center;
+  background-image: url("../airfraissvp/assets/images/icone_bouton_radio.svg");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  transition: background-image ease-in-out 0.3s;
+  z-index: 2;
+}
+.main .boutonRadio1 label:after {
+  width: 10px;
+  height: 5px;
+  border-radius: 25%;
+  content: "";
+  background-color: #DDE4F1;
+  position: absolute;
+  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transition: all 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  z-index: -1;
+}
+.main .boutonRadio1 input:checked ~ label:before {
+  background-image: url("../airfraissvp/assets/images/icone_bouton_radioSelectionne.svg");
+}
+.main .boutonRadio1 input:checked ~ label:after {
+  transform: translate(-40%, -50%) scale3d(100, 30, 1);
+  opacity: 1;
+}
+.main .boutonRadioGroupe2 {
+  width: 50%;
+  padding: 10px;
+  background-color: #F6F7FB;
+  border-top-right-radius: 5px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 0;
+}
+.main .boutonRadioGroupe2 input {
+  display: none;
+}
+.main .boutonRadioGroupe2 label {
+  font-weight: lighter;
+  margin-left: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.main .boutonRadioGroupe2 label:before {
+  content: "";
+  cursor: pointer;
+  padding: 15px;
+  margin-right: 15px;
+  line-height: 1.5;
+  text-align: center;
+  background-image: url("../airfraissvp/assets/images/icone_bouton_radio.svg");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  transition: background-image ease-in-out 0.3s;
+  z-index: 2;
+}
+.main .boutonRadioGroupe2 label:after {
+  width: 10px;
+  height: 5px;
+  border-radius: 25%;
+  content: "";
+  background-color: #DDE4F1;
+  position: absolute;
+  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transition: all 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  z-index: -1;
+}
+.main .boutonRadioGroupe2 input:checked ~ label:before {
+  background-image: url("../airfraissvp/assets/images/icone_bouton_radioSelectionne.svg");
+}
+.main .boutonRadioGroupe2 input:checked ~ label:after {
+  transform: translate(-40%, -50%) scale3d(100, 30, 1);
+  opacity: 1;
+}
+.main .boutonRadioGroupe1 {
+  width: 50%;
+  padding: 10px;
+  background-color: #F6F7FB;
+  border-top-left-radius: 5px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 0;
+}
+.main .boutonRadioGroupe1 input {
+  display: none;
+}
+.main .boutonRadioGroupe1 label {
+  font-weight: lighter;
+  margin-left: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.main .boutonRadioGroupe1 label:before {
+  content: "";
+  cursor: pointer;
+  padding: 15px;
+  margin-right: 15px;
+  line-height: 1.5;
+  text-align: center;
+  background-image: url("../airfraissvp/assets/images/icone_bouton_radio.svg");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  transition: background-image ease-in-out 0.3s;
+  z-index: 2;
+}
+.main .boutonRadioGroupe1 label:after {
+  width: 10px;
+  height: 5px;
+  border-radius: 25%;
+  content: "";
+  background-color: #DDE4F1;
+  position: absolute;
+  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transition: all 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  z-index: -1;
+}
+.main .boutonRadioGroupe1 input:checked ~ label:before {
+  background-image: url("../airfraissvp/assets/images/icone_bouton_radioSelectionne.svg");
+}
+.main .boutonRadioGroupe1 input:checked ~ label:after {
+  transform: translate(-40%, -50%) scale3d(100, 30, 1);
+  opacity: 1;
+}
+
+/**
+ * @project Avis solution (checkbox.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gestion des styles des checkbox
+**/
+/** Import de mes variables **/
+/**
+ * @project Avis solution (variables.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gérer variable comme les couleurs et typographies à utiliser
+**/
+/** --------------------------------------------- Typographies -------------------------------------------------------------- **/
+/** Polices de caractères, importé de Google Fonts **/
+/** --------------------------------------------- Couleurs -------------------------------------------------------------- **/
+/** Palette de couleurs (Ouverte au changement, à changer ici au besoin!) **/
+/** Les deux couleurs principales **/
+/** Autres couleur (Fond et décoration) **/
+/** --------------------------------------------- Points de rupture -------------------------------------------------------------- **/
+/**
+ * @project Avis solution (mixins.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo gérer les mixins
+**/
+/**
+ * ----------------------------
+ * TABLE DES MATIERES - MIXINS
+ * ----------------------------
+ * Utilitaires de base
+ ** Box sizing
+ ** Clearfix
+ * Accessibilité
+ * Typographie
+ */
+/********** Utilitaires de base **********/
+/** Box sizing **/
+/* Clearfix */
+/********* Accessibilité *********/
+.visuallyhidden,
+.screen-reader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus,
+.screen-reader-only.focusable:active,
+.screen-reader-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/******** Typographie *********/
+/********************* Styles *********************/
+.main {
+  /********************* Boutons radios *********************/
+}
+.main .bouton_checkbox {
+  width: 100%;
+  padding: 10px;
+  background-color: #F6F7FB;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 0;
+}
+.main .bouton_checkbox input {
+  display: none;
+}
+.main .bouton_checkbox label {
+  font-weight: lighter;
+  margin-left: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.main .bouton_checkbox label:before {
+  content: "";
+  cursor: pointer;
+  padding: 15px;
+  margin-right: 15px;
+  line-height: 1.5;
+  text-align: center;
+  background-image: url("../airfraissvp/assets/images/icone_bouton_checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  transition: background-image ease-in-out 0.3s;
+  z-index: 2;
+}
+.main .bouton_checkbox label:after {
+  width: 10px;
+  height: 5px;
+  border-radius: 25%;
+  content: "";
+  background-color: #DDE4F1;
+  position: absolute;
+  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transition: all 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  z-index: -1;
+}
+.main .bouton_checkbox input:checked ~ label:before {
+  background-image: url("../airfraissvp/assets/images/icone_bouton_checkboxSelectionne.svg");
+}
+.main .bouton_checkbox input:checked ~ label:after {
+  transform: translate(-40%, -50%) scale3d(100, 30, 1);
+  opacity: 1;
+}
+
+.retroaction {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000000;
+  text-align: center;
+  background-color: #F6F7FB;
+  box-shadow: 5px 5px #FFE396;
+  border: 5px solid #F2972A;
+  border-radius: 5px;
+  padding: 3rem;
+  animation: retroaction 5s forwards ease-in-out;
+  animation-delay: 5s;
+  animation-iteration-count: 1;
+}
+.retroaction span {
+  display: block;
+}
+.retroaction img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes retroaction {
+  from {
+    top: 55%;
+  }
+  to {
+    top: -30%;
+  }
+}
+/**** UTILITAIRES ****/
+/**
+ * @project Avis solution (variables.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo Gérer variable comme les couleurs et typographies à utiliser
+**/
+/** --------------------------------------------- Typographies -------------------------------------------------------------- **/
+/** Polices de caractères, importé de Google Fonts **/
+/** --------------------------------------------- Couleurs -------------------------------------------------------------- **/
+/** Palette de couleurs (Ouverte au changement, à changer ici au besoin!) **/
+/** Les deux couleurs principales **/
+/** Autres couleur (Fond et décoration) **/
+/** --------------------------------------------- Points de rupture -------------------------------------------------------------- **/
+/**
+ * @project Avis solution (mixins.scss)
+ * @author Camille Dion-Bolduc <camille.dion.bolduc@gmail.com>
+ * @todo gérer les mixins
+**/
+/**
+ * ----------------------------
+ * TABLE DES MATIERES - MIXINS
+ * ----------------------------
+ * Utilitaires de base
+ ** Box sizing
+ ** Clearfix
+ * Accessibilité
+ * Typographie
+ */
+/********** Utilitaires de base **********/
+/** Box sizing **/
+/* Clearfix */
+/********* Accessibilité *********/
+.visuallyhidden,
+.screen-reader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus,
+.screen-reader-only.focusable:active,
+.screen-reader-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/******** Typographie *********/
+
+/*# sourceMappingURL=styles.css.map */

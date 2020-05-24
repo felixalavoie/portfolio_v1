@@ -1,0 +1,45 @@
+{
+  "fr": {
+    "nom": {
+      "erreur_regexp": "Le nom entré n'est pas valide",
+      "vide": "Veuillez entrer un nom"
+    },
+
+    "sujet": {
+      "erreur_regexp": "Le sujet contient des caractères non-permis",
+      "vide": "Veuillez entrer un sujet"
+    },
+
+    "courriel": {
+      "erreur_regexp": "Cette adresse courriel contient des charactères non-permis",
+      "vide": "Veuillez entrer une adresse courriel"
+    },
+
+    "text": {
+      "erreur_regexp": "",
+      "vide": "Veuillez entrer un message"
+    }
+  },
+
+  "en": {
+    "nom": {
+      "erreur_regexp": "This name contains invalid characters",
+      "vide": "Please enter your name"
+    },
+
+    "sujet": {
+      "erreur_regexp": "The subject contains invalid characters",
+      "vide": "Please enteer a subject for your message"
+    },
+
+    "courriel": {
+      "erreur_regexp": "This email adress contains invalid characters",
+      "vide": "Please enter an email adress for future contact"
+    },
+
+    "text": {
+      "erreur_regexp": "",
+      "vide": "Please enter a message"
+    }
+  }
+}

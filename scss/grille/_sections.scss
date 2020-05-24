@@ -1,0 +1,277 @@
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  //position: absolute;
+  //top: 0;
+  padding: 0;
+  margin: 0;
+
+  background-image: url("../images/background_texture.jpg");
+  background-repeat: repeat;
+  scroll-behavior: smooth;
+}
+
+main {
+  max-height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.conteneur {
+  height: 100vh;
+}
+
+.section {
+  scroll-snap-align: center;
+}
+
+.section {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.section1 {
+  background-color: transparentize($blue, 0.3);
+
+  .conteneur {
+    position: relative;
+    height: 100vh;
+    vertical-align: middle;
+  }
+
+  img, .infos {
+    margin-top: 40vh;
+    transform: translateY(-50%);
+  }
+
+  img {
+    width: span(3 of 12);
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-left: span(1 of 12)+gutter(1 of 12);
+  }
+
+  .infos {
+    width: span(6 of 12);
+    margin-right: span(1 of 12)+gutter(1 of 12);
+    float: right;
+    padding: 3rem 0;
+  }
+}
+
+.section2 {
+  background-color: transparentize($purple, 0.3);
+
+  .projets {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .un_projet {
+    margin-top: 2rem;
+    //margin-right: gutter(1 of 12);
+    width: span(4 of 12);
+    height: 35rem;
+    overflow: hidden;
+    //border: 3px solid black;
+    position: relative;
+    background-color: transparentize(#23232e, 0.1);
+    color: $blanc;
+    opacity: 1;
+    transition: ease-in-out .3s;
+
+    &:hover .un_projet-cover {
+      opacity: 0;
+      transition: ease-in-out .3s;
+      z-index: -1;
+    }
+
+    &-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+    }
+
+    &-techs {
+      list-style: none;
+      display: inline;
+      color: $blue;
+
+      li {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+    }
+
+    .ext_links {
+      position: absolute;
+      bottom: 1rem;
+      left: 2rem;
+      z-index: 5;
+
+      a {
+        display: inline-block;
+        margin-right: 1.5rem;
+        //background-color: pink;
+        text-align: center;
+        vertical-align: bottom;
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+        transition: ease-in-out .4s;
+
+        &:hover {
+          background-color: $blanc;
+
+          svg {
+            transform: scale(0.7);
+          }
+
+          svg path {
+            fill: $noir;
+          }
+        }
+
+        &.view svg {
+          margin-top: .25rem;
+        }
+
+        &.github svg {
+          margin-top: .2rem;
+        }
+
+        svg {
+          height: 2.5rem;
+          width: 2.5rem;
+
+          path {
+            fill: $blanc;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section3 {
+  background-color: transparentize($green, 0.3);
+
+  .techs {
+    width: span(12 of 12);
+    margin-top: 12rem;
+  }
+}
+
+.section4 {
+  background-color: transparentize($pink, 0.3);
+
+  .conteneur {
+    position: relative;
+  }
+
+  form {
+    width: span(6 of 12);
+    margin: 2rem auto;
+
+    .form__div {
+      margin-bottom: 1rem;
+    }
+
+    label, input, textarea {
+      width: 100%;
+      border: none;
+      border-radius: .25rem;
+    }
+
+    input {
+      height: 1.5rem;
+      padding: .5rem;
+    }
+
+    textarea {
+      height: 8rem;
+      padding: .5rem;
+    }
+
+    input[type="submit"] {
+      width: span(2 of 6);
+      margin-left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.1rem;
+
+      padding: 0;
+      height: 3.5rem;
+
+      border: 3px solid black;
+      border-radius: .5rem;
+      line-height: 2.1rem;
+      transition: ease-in-out .2s;
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+
+    .message_erreur {
+      color: $typoRougeIncorrecte;
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+  }
+}
+
+.social {
+  width: span(1 of 12);
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+
+  a {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 50%;
+
+    margin-top: -16rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: ease-in-out 0.2s;
+
+    svg {
+      padding: 1rem;
+    }
+  }
+
+  a:hover {
+    background-color: black;
+
+    #path {
+      fill: white;
+    }
+  }
+
+  a:last-of-type:after {
+    content: url("../images/svg/horizontal_line.svg");
+    width: 100%;
+    display: block;
+    vertical-align: bottom;
+    font-size: 0;
+    margin-top: 1rem;
+  }
+}
